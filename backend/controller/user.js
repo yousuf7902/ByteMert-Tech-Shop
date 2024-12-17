@@ -53,7 +53,7 @@ router.post(
 
             if (userEmail) {
                 const filename = req.file.filename;
-                const filePath = `uploads/${filename}`;
+                const filePath = `backend/uploads/${filename}`;
 
                 fs.unlink(filePath, (err) => {
                     res.status(500).json({ message: "File deleted...." });
@@ -75,7 +75,7 @@ router.post(
             };
 
             const activationToken = createActivationToken(user);
-            const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+            const activationUrl = `https://bytemert-tech-shop.netlify.app/activation/${activationToken}`;
 
             try {
                 await sendMail({
@@ -395,7 +395,7 @@ router.get(
             
             user.password = tokenVerify.password;
             await user.save();
-            res.redirect(`http://localhost:3000/login`); 
+            res.redirect(`https://bytemert-tech-shop.netlify.app/login`); 
         } catch (error) {
             console.log(error);
             return next(new ErrorHandler(error.message, 500));

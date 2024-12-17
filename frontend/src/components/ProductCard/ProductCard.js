@@ -24,7 +24,7 @@ const ProductCard = (data) => {
             <div className="flex justify-end"></div>
             <Link to={`/products/${productName}`}>
                 <img
-                    src={`${backend_url}+"/uploads/"+${image}`}
+                    src={`${backend_url}${image}`}
                     alt={_id}
                     className="w-full h-[200px] object-full border-2 rounded-lg border-blue-200"
                 />

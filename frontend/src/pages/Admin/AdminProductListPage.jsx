@@ -313,7 +313,7 @@ const AdminProductListPage = () => {
                                         >
                                             <td className="py-2 px-4 text-center">
                                                 <img
-                                                    src={`${backend_url}${product.image}`}
+                                                    src={`${backend_url}/images/${product.image}`}
                                                     alt={product.name}
                                                     className="w-[50px] h-[50px] object-cover rounded-full border-2 border-blue-900 mx-auto"
                                                 />

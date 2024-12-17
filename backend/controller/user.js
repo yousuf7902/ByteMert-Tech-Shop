@@ -75,7 +75,7 @@ router.post(
             };
 
             const activationToken = createActivationToken(user);
-            const activationUrl = `https://bytemert-tech-shop.netlify.app/activation/${activationToken}`;
+            const activationUrl = `http://localhost:3000/activation/${activationToken}`;
 
             try {
                 await sendMail({
@@ -395,7 +395,7 @@ router.get(
             
             user.password = tokenVerify.password;
             await user.save();
-            res.redirect(`https://bytemert-tech-shop.netlify.app/login`); 
+            res.redirect(`http://localhost:3000/login`); 
         } catch (error) {
             console.log(error);
             return next(new ErrorHandler(error.message, 500));

@@ -75,7 +75,7 @@ router.post(
             };
 
             const activationToken = createActivationToken(user);
-            const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+            const activationUrl = `https://bytemert-tech-shop.netlify.app/activation/${activationToken}`;
 
             try {
                 await sendMail({
@@ -236,7 +236,7 @@ router.post("/forgot-password",AsyncErrors(async (req, res, next) => {
          user.password = req.body.password;
 
          const activationToken = createActivationToken(user);
-         const activationUrl = `http://localhost:8080/api/v2/users/reset-password/${activationToken}`;
+         const activationUrl = `https://bytemert-tech-shop.onrender.com/api/v2/users/reset-password/${activationToken}`;
 
          try {
              await sendMail({
@@ -395,7 +395,7 @@ router.get(
             
             user.password = tokenVerify.password;
             await user.save();
-            res.redirect(`http://localhost:3000/login`); 
+            res.redirect(`https://bytemert-tech-shop.netlify.app/login`); 
         } catch (error) {
             console.log(error);
             return next(new ErrorHandler(error.message, 500));

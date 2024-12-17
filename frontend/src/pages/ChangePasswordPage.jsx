@@ -28,7 +28,7 @@ const ChangePasswordPage = () => {
             };
             try {
                 await axios.put(
-                    "https://bytemert-tech-shop.onrender.com/api/v2/users/profile/change-password?",
+                    "http://localhost:8080/api/v2/users/profile/change-password?",
                     updateData,
                     {
                         withCredentials: true,

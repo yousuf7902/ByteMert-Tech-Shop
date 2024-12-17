@@ -7,7 +7,6 @@ exports.isAuthenticated = AsyncErrors(async (req, res, next) => {
     const { token } = req.cookies;
 
     if (!token) {
-        console.log(token);
         return next(new ErrorHandler("Please login to continue", 401));
     }
 

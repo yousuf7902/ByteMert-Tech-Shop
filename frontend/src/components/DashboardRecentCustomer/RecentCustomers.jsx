@@ -26,10 +26,10 @@ const RecentCustomers = ({data}) => {
                     {data && data.map((customer, index)=> (
                         <tr className={index % 2 ? "bg-blue-100" : "bg-white"}>
                             <td className="px-4 py-2 text-left text-sm font-semibold text-blue-600 tracking-wider">
-                                <Link to={`/admin/orderslist?id=${customer.user._id}`}>{customer.user.name}</Link>
+                                <Link to={`/admin/orderslist?id=${customer.user?._id}`}>{customer.user?.name}</Link>
                             </td>
                             <td className="px-4 py-2 text-left text-sm font-semibold text-blue-600  tracking-wider">
-                                 <Link to={`/admin/orderslist?id=${customer.user._id}`}>{customer.user.email}</Link>
+                                 <Link to={`/admin/orderslist?id=${customer.user?._id}`}>{customer.user?.email}</Link>
                             </td>
                         </tr>  
                     ))}

@@ -42,13 +42,9 @@ const UserProfilePage = () => {
         e.preventDefault();
         if (edit) {
             try {
-                await axios.put(
-                    "https://bytemert-tech-shop.onrender.com/api/v2/users/profile",
-                    userProfile,
-                    {
-                        withCredentials: true,
-                    }
-                );
+                await axios.put("http://localhost:8080/api/v2/users/profile", userProfile, {
+                    withCredentials: true,
+                });
                 dispatch(updateUser(userProfile))
             } catch (error) {
                 console.error(

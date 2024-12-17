@@ -236,7 +236,7 @@ router.post("/forgot-password",AsyncErrors(async (req, res, next) => {
          user.password = req.body.password;
 
          const activationToken = createActivationToken(user);
-         const activationUrl = `https://bytemert-tech-shop.onrender.com/api/v2/users/reset-password/${activationToken}`;
+         const activationUrl = `http://localhost:8080/api/v2/users/reset-password/${activationToken}`;
 
          try {
              await sendMail({
@@ -405,7 +405,6 @@ router.get(
 
 //Create activation token
 const createActivationToken = (user) => {
-    console.log(user)
     const userObject = user.toObject ? user.toObject() : user;
     return jwt.sign(userObject, process.env.ACTIVATION_SECRET, {
         expiresIn: "5m",

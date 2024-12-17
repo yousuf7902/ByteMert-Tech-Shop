@@ -47,7 +47,7 @@ const SliderProducts = () => {
                         }`}
                     >
                         <img
-                            src={`${backend_url}${slide.image}`}
+                            src={`${backend_url}/images/${slide.image}`}
                             className="absolute block w-full h-full object-fill"
                             alt={slide.name}
                         />{" "}

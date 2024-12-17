@@ -55,7 +55,10 @@ const Signup = () => {
         e.preventDefault();
         
         if(validateForm()){
-            const config = { headers: { "Content-Type": "multipart/form-data" } };
+            const config = {
+                headers: { "Content-Type": "multipart/form-data" },
+                withCredentials: true,
+            };
             const newFormData = new FormData();
 
             newFormData.append("file", avatar);
@@ -73,7 +76,7 @@ const Signup = () => {
                     setAvatar();
                 })
                 .catch((err) => {
-                    toast.error(err.response.data.message);
+                    toast.error(err.response?.data.message);
                 });
         }
     };

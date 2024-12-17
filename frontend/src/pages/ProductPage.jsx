@@ -95,7 +95,7 @@ const ProductPage = () => {
                 <div className="order-2 mt-5 sm:order-1 sm:mt-0 lg:col-span-2">
                     <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6 lg:space-x-8">
                         <img
-                            src={`${backend_url}${image}`}
+                            src={`${backend_url}/images/${image}`}
                             alt={product.name}
                             className="w-full sm:w-[250px] md:w-[300px] lg:w-[350px] h-[200px] sm:h-[250px] md:h-[300px] lg:h-[300px] rounded object-cover"
                         />

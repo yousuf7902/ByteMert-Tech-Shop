@@ -122,8 +122,8 @@ router.post(
             total_amount: order.totalPrice,
             currency: "BDT",
             tran_id: tran_id, // use unique tran_id for each api call
-            success_url: `http://localhost:8080/api/v2/orders/payment-online/success/${tran_id}`,
-            fail_url: `http://localhost:8080/api/v2/orders/payment-online/failed/${tran_id}`,
+            success_url: `https://bytemert-tech-shop.onrender.com/api/v2/orders/payment-online/success/${tran_id}`,
+            fail_url: `https://bytemert-tech-shop.onrender.com/api/v2/orders/payment-online/failed/${tran_id}`,
             cancel_url: "http://localhost:3030/cancel",
             ipn_url: "http://localhost:3030/ipn",
             shipping_method: "Courier",

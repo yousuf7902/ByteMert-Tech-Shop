@@ -46,11 +46,14 @@ const AdminProductEditPage = () => {
             description,
             countInStock,
         };
-        dispatch(updateProduct(updatedProduct)).then(() => {
-            toast.success("Product Edited")
-        });
-        navigate("/admin/productslist");
-        window.location.reload();
+        dispatch(updateProduct(updatedProduct))
+            .then(() => {
+                toast.success("Product Edited");
+            })
+            .then(() => {
+                navigate("/admin/productslist");
+                window.location.reload();
+            });
     };
 
     const goBackHandler = () => {

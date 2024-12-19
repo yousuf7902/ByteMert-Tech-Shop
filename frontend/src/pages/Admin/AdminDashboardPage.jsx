@@ -49,7 +49,7 @@ const AdminDashboardPage = () => {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         <DashboardCard title="Earning" value={`${earnings} ৳`} />
-                        <DashboardCard title="Total Selles" value={selles.length} />
+                        <DashboardCard title="Total Selles" value={selles?.length} />
                         <DashboardCard title="Total Products" value={allProducts.length} />
                         <DashboardCard title="Total Users" value={allUsers.length} />
                     </div>

@@ -139,7 +139,7 @@ const CartPage = () => {
                             {cartItems.map((item) => (
                                 <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
                                     <img
-                                        src={`${backend_url}${item.image}`}
+                                        src={`${backend_url}/images/${item.image}`}
                                         alt="product-image"
                                         class="w-full rounded-lg sm:w-40"
                                     />

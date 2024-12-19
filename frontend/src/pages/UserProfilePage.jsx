@@ -7,6 +7,7 @@ import { backend_url } from "../server";
 import axios from "axios";
 import { updateUser } from "../Redux/slices/userSlice";
 
+
 const UserProfilePage = () => {
     const [edit, setEdit] = useState(false);
     const [userProfile, setUserProfile] = useState({
@@ -24,7 +25,7 @@ const UserProfilePage = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    console.log(userInfo)
+    console.log(userInfo.avatar.url)
 
     useEffect(() => {
         setUserProfile({
@@ -32,7 +33,7 @@ const UserProfilePage = () => {
             address: shippingAddress.address,
             email: userInfo?.email,
             number: shippingAddress.number,
-            image: `${backend_url}${userInfo.avatar?.url}`,
+            image: `${backend_url}/images/${userInfo.avatar?.url}`,
             city: shippingAddress.city,
             postalCode: shippingAddress.postalCode,
         });
@@ -42,13 +43,9 @@ const UserProfilePage = () => {
         e.preventDefault();
         if (edit) {
             try {
-                await axios.put(
-                    "https://bytemert-tech-shop.onrender.com/api/v2/users/profile",
-                    userProfile,
-                    {
-                        withCredentials: true,
-                    }
-                );
+                await axios.put("http://localhost:8080/api/v2/users/profile", userProfile, {
+                    withCredentials: true,
+                });
                 dispatch(updateUser(userProfile))
             } catch (error) {
                 console.error(

@@ -77,7 +77,7 @@ const PlaceOrderPage = () => {
                                     details?.orderItems.map((item) => (
                                         <div className="flex items-center justify-center space-x-4">
                                             <img
-                                                src={`${backend_url}${item.image}`}
+                                                src={`${backend_url}/images/${item.image}`}
                                                 alt="Logitech Mouse"
                                                 className="w-16 h-16 object-cover rounded"
                                             />

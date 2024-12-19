@@ -104,7 +104,7 @@ const Header = () => {
                                                 className="w-full flex items-start-py-3 mb-3 border border-gray-300 cursor-pointer"
                                             >
                                                 <img
-                                                    src={`${backend_url}${i.image}`}
+                                                    src={`${backend_url}/images/${i.image}`}
                                                     alt="no pic"
                                                     className="w-[50px] h-[50px] mr-[10px]"
                                                 />
@@ -148,7 +148,7 @@ const Header = () => {
                                         <Link to="/users/profile">
                                             <div className="">
                                                 <img
-                                                    src={`${backend_url}${userInfo.avatar?.url}`}
+                                                    src={`${backend_url}/images/${userInfo.avatar?.url}`}
                                                     className="w-[52px] h-[52px] text-blue-900 rounded-full shadow-md border-2 border-blue-900 p-[2px]"
                                                 />
                                             </div>

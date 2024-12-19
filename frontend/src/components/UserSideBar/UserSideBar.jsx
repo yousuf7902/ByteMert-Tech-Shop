@@ -55,7 +55,7 @@ const UserSideBar = () => {
                                 {userInfo.avatar?.url ? (
                                     <img
                                         className="p-1 h-[80px] w-[80px] sm:h-[100px] sm:w-[100px] md:h-[120px] md:w-[120px] rounded-full object-cover mr-2 border-4 border-blue-900"
-                                        src={`${backend_url}${userInfo.avatar.url}`}
+                                        src={`${backend_url}/images/${userInfo.avatar.url}`}
                                         alt="User Avatar"
                                     />
                                 ) : (
@@ -162,7 +162,7 @@ const UserSideBar = () => {
                             <div className="flex flex-col items-center justify-center">
                                 <img
                                     className="p-1 h-[80px] w-[80px] sm:h-[100px] sm:w-[100px] md:h-[120px] md:w-[120px] rounded-full object-cover mr-2 border-4 border-blue-900"
-                                    src={`${backend_url}${userInfo.avatar?.url}`}
+                                    src={`${backend_url}/images/${userInfo.avatar?.url}`}
                                     alt="User"
                                 />
                                 <p className="font-bold text-lg sm:text-xl text-blue-900 mt-3 sm:mt-4 md:mt-5 text-center">

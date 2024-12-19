@@ -10,12 +10,12 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: "https://bytemert-tech-shop.netlify.app",
+        origin: "http://localhost:3000",
         credentials: true,
     })
 );
 
-app.use("/images/", express.static("uploads"));
+app.use("/images/", express.static("backend/uploads/"));
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 
 //Config

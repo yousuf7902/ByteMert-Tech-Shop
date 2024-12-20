@@ -319,7 +319,9 @@ const AdminProductListPage = () => {
                                                 />
                                             </td>
                                             <td className="py-2 px-4 text-center">
-                                                {product.name}
+                                                {product.name.length > 50
+                                                    ? product.name.slice(0, 40) + "..."
+                                                    : product.name}
                                             </td>
                                             <td className="py-2 px-4 text-center font-semibold text-green-600">
                                                 {product.price}{" "}

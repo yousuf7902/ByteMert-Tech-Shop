@@ -173,7 +173,7 @@ router.post(
 
             updateOrder.isPaid = true;
             await updateOrder.save();
-            res.redirect(`https://bytemert-tech-shop.netlify.app/placeorder`);
+            res.redirect(`http://localhost:3000/placeorder`);
         } catch (error) {
             return next(new ErrorHandler(error.message, 500));
         }
@@ -187,7 +187,7 @@ router.post(
     asyncHandler(async (req, res, next) => {
         try {
             await Order.deleteOne({tranId: req.params.tranId})
-            res.redirect(`https://bytemert-tech-shop.netlify.app`);
+            res.redirect(`http://localhost:3000`);
         } catch (error) {
             return next(new ErrorHandler(error.message, 500));
         }
